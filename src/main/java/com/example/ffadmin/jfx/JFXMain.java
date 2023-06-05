@@ -23,9 +23,8 @@ public class JFXMain extends Application {
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         context.publishEvent(new StageReadyEvent(stage));
-        System.out.println("suys");
     }
 
      public static class StageReadyEvent extends ApplicationEvent {
