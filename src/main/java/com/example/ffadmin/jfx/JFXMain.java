@@ -30,7 +30,7 @@ public class JFXMain extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         ClassLoader cl = ClassLoader.getSystemClassLoader();
-        FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource("templates/main-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource("templates/main-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setTitle("Admin App");
