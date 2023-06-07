@@ -11,10 +11,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#returnToMainPage" styleClass="btn" text="Return" />
             <Button mnemonicParsing="false" onAction="#OpenOrderPage" styleClass="btn" text="Order" />
-            <Button mnemonicParsing="false" onAction="#openCategoryPage" styleClass="btn" text="category">
-               <font>
-                  <Font size="12.0" />
-               </font></Button>
+            <Button mnemonicParsing="false" onAction="#openCategoryPage" styleClass="btn" text="category"/>
          </children>
          <opaqueInsets>
             <Insets />
@@ -38,7 +35,7 @@
                   <TextField fx:id="nameField" promptText="name your product" />
                   <TextField fx:id="category" promptText="input your category" />
                   <TextField fx:id="price" promptText="input your price (in cents)" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduct" text="Submit" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduct" text="Submit" styleClass="btn" />
                </children>
                <GridPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

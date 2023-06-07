@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.experimental.UtilityClass;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 
@@ -17,6 +18,7 @@ public class ctrlUtil {
         // just why?
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Scene newScene = new Scene(fxmlLoader.load(), 600, 400);
+        newScene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setScene(newScene);
     }
 }
