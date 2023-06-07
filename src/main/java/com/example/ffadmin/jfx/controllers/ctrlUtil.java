@@ -15,6 +15,7 @@ public class ctrlUtil {
     public static void reroute(ActionEvent actionEvent, String route) throws IOException {
         ClassLoader cl = ClassLoader.getSystemClassLoader();
         FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource(route));
+        System.out.println(cl.getResource(route));
         // just why?
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Scene newScene = new Scene(fxmlLoader.load(), 600, 400);
