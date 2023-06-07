@@ -16,32 +16,17 @@ public class MainController {
 
     @FXML
     public void openProductPage(ActionEvent actionEvent) throws IOException {
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-        FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource("templates/product-page.fxml"));
-        // just why?
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Scene newScene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setScene(newScene);
+        ctrlUtil.reroute(actionEvent, "templates/product-page.fxml");
     }
 
     @FXML
     public void openOrdersPage(ActionEvent actionEvent) throws IOException {
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-        FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource("templates/orders-page.fxml"));
-        // just why?
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Scene newScene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setScene(newScene);
+        ctrlUtil.reroute(actionEvent, "templates/orders-page.fxml");
     }
 
     @FXML
     public void OpenCategoriesPage(ActionEvent actionEvent) throws IOException {
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-        FXMLLoader fxmlLoader = new FXMLLoader(cl.getResource("templates/categories-page.fxml"));
-        // just why?
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Scene newScene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setScene(newScene);
+        ctrlUtil.reroute(actionEvent, "templates/categories-page.fxml");
     }
 
     @FXML
