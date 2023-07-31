@@ -11,9 +11,9 @@ public class RestProductController {
     private final String baseURI = "http://localhost:8080/product/";
     private final RestProductCategoryController productCategoryController;
 
-    public RestProductController(RestTemplate restTemplate, RestProductCategoryController productCategoryController){
-        this.restTemplate = restTemplate;
-        this.productCategoryController = productCategoryController;
+    public RestProductController(){
+        restTemplate = new RestTemplate();
+        productCategoryController = new RestProductCategoryController();
     }
 
     public Product readProduct(Long id){

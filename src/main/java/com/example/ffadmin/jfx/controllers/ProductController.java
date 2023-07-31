@@ -19,8 +19,11 @@ public class ProductController {
     @FXML
     public TextField price;
 
-    @Autowired
-    private RestProductController productController;
+    private final RestProductController productController;
+
+    public ProductController(){
+        productController = new RestProductController();
+    }
 
     @FXML
     public void addProduct(ActionEvent actionEvent) {

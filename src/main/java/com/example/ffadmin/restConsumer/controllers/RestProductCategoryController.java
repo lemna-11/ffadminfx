@@ -11,8 +11,8 @@ public class RestProductCategoryController {
     private final RestTemplate restTemplate;
     private final String baseURI = "http://localhost:8080/product/";
 
-    public RestProductCategoryController(RestTemplate restTemplate){
-        this.restTemplate = restTemplate;
+    public RestProductCategoryController(){
+        restTemplate = new RestTemplate();
     }
 
     public ProductCategory findByName(String name){
