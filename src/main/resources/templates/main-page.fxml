@@ -6,7 +6,7 @@
 <HBox minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ffadmin.jfx.controllers.MainController">
    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="90.0">
       <Button mnemonicParsing="false" onAction="#openProductPage" prefHeight="100.0" prefWidth="90.0" styleClass="btn-success" text="Product" />
-      <Button mnemonicParsing="false" onAction="#openOrdersPage" prefHeight="100.0" prefWidth="90.0" styleClass="btn-success" text="Orders" />
+      <Button mnemonicParsing="false" onAction="#openOrderPage" prefHeight="100.0" prefWidth="90.0" styleClass="btn-success" text="Orders" />
       <Button mnemonicParsing="false" onAction="#OpenCategoriesPage" prefHeight="100.0" prefWidth="90.0" styleClass="btn-success" text="Categories" />
       <Button mnemonicParsing="false" onAction="#exitApp" prefHeight="100.0" prefWidth="90.0" styleClass="btn-success" text="Quit" />
    </VBox>

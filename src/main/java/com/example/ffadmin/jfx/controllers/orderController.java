@@ -1,5 +1,6 @@
 package com.example.ffadmin.jfx.controllers;
 
+
 import com.example.ffadmin.restConsumer.controllers.RestProductController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,26 +14,19 @@ import java.awt.*;
 import java.io.IOException;
 
 @Controller
-public class ProductController {
-    @FXML
-    public TextField nameField;
-    @FXML
-    public TextField category;
-    @FXML
-    public TextField price;
+public class orderController {
+    @FXML public static TextField status;
+    @FXML public static TextField ordid;
 
-    private final RestProductController productController;
+    private final RestProductController orderController;
 
-    public ProductController(){
-        productController = new RestProductController();
+    public orderController(){
+        orderController = new RestProductController();
     }
 
-
-    @FXML
-    public void addProduct(ActionEvent actionEvent) {
-        productController.addProduct(nameField.getText(), category.getText(), Long.parseLong(price.getText()));
+    public static void openOrder(ActionEvent actionEvent) {
+        ProductController.openOrder(status.getText(), ordid.getText());
     }
-
 
     public void returnToMainPage(ActionEvent actionEvent) throws IOException {
         ctrlUtil.reroute(actionEvent, "templates/main-page.fxml");

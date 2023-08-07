@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class Order {
-    private Long id;
+    private Long ordid;
     private List<Product> products;
     private OrderStatus status;
 

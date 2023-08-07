@@ -17,17 +17,19 @@ public class MainController {
     }
 
     @FXML
-    public void openOrdersPage(ActionEvent actionEvent) throws IOException {
-        ctrlUtil.reroute(actionEvent, "templates/orders-page.fxml");
+    public void openOrderPage(ActionEvent actionEvent) throws IOException {
+        ctrlUtil.reroute(actionEvent, "templates/order-page.fxml");
     }
 
     @FXML
     public void OpenCategoriesPage(ActionEvent actionEvent) throws IOException {
-        ctrlUtil.reroute(actionEvent, "templates/categories-page.fxml");
+        ctrlUtil.reroute(actionEvent, "templates/category-page.fxml");
     }
 
     @FXML
     public void exitApp(ActionEvent actionEvent) {
         System.exit(0);
     }
+
+
 }

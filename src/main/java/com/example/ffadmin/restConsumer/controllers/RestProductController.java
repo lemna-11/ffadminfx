@@ -1,5 +1,6 @@
 package com.example.ffadmin.restConsumer.controllers;
 
+import com.example.ffadmin.restConsumer.entities.Order;
 import com.example.ffadmin.restConsumer.entities.Product;
 import com.example.ffadmin.restConsumer.entities.ProductCategory;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,4 +28,5 @@ public class RestProductController {
         ProductCategory cat = this.productCategoryController.findByName(category);
         return restTemplate.postForObject(baseURI + "create?name=" + name + "&category=" + cat + "&price=" + price, null, Long.class);
     }
+
 }
