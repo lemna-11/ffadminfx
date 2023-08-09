@@ -1,7 +1,9 @@
 package com.example.ffadmin.jfx.controllers;
 
 
+import com.example.ffadmin.restConsumer.controllers.RestOrderController;
 import com.example.ffadmin.restConsumer.controllers.RestProductController;
+import com.example.ffadmin.restConsumer.entities.Order;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -18,14 +20,14 @@ public class orderController {
     @FXML public static TextField status;
     @FXML public static TextField ordid;
 
-    private final RestProductController orderController;
+    private final RestOrderController orderController;
 
     public orderController(){
-        orderController = new RestProductController();
+        orderController = new RestOrderController();
     }
 
-    public static void openOrder(ActionEvent actionEvent) {
-        ProductController.openOrder(status.getText(), ordid.getText());
+    public void openOrder(ActionEvent actionEvent) {
+        orderController.openOrder(Long.valueOf(ordid.getText()));
     }
 
     public void returnToMainPage(ActionEvent actionEvent) throws IOException {

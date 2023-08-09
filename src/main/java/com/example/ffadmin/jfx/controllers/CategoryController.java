@@ -1,40 +1,28 @@
 package com.example.ffadmin.jfx.controllers;
 
-import com.example.ffadmin.restConsumer.controllers.RestProductController;
+
+import com.example.ffadmin.restConsumer.controllers.RestCategoryController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 
 @Controller
-public class ProductController {
+public class CategoryController {
     @FXML
-    public TextField nameField;
+    public TextField categoryName;
     @FXML
-    public TextField category;
-    @FXML
-    public TextField price;
+    public TextField catid;
 
-    private final RestProductController productController;
+    public RestCategoryController categoryController;
 
-    public ProductController(){
-        productController = new RestProductController();
+
+
+    public void addCategory(ActionEvent actionEvent) {
+        categoryController.addCategory(categoryName.getText(), Long.parseLong(catid.getText()));
     }
-
-
-
-
-    @FXML
-    public void addProduct(ActionEvent actionEvent) {
-        productController.addProduct(nameField.getText(), category.getText(), Long.parseLong(price.getText()));
-    }
-
 
     public void returnToMainPage(ActionEvent actionEvent) throws IOException {
         ctrlUtil.reroute(actionEvent, "templates/main-page.fxml");
