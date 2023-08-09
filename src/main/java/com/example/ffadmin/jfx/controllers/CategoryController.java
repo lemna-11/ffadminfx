@@ -18,7 +18,9 @@ public class CategoryController {
 
     public RestCategoryController categoryController;
 
-
+    public CategoryController(){
+        this.categoryController = new RestCategoryController();
+    }
 
     public void addCategory(ActionEvent actionEvent) {
         categoryController.addCategory(categoryName.getText(), Long.parseLong(catid.getText()));
@@ -39,6 +41,4 @@ public class CategoryController {
     public void openProductPage(ActionEvent actionEvent) throws IOException {
         ctrlUtil.reroute(actionEvent,"templates/product-page.fxml" );
     }
-
-
 }
