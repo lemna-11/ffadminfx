@@ -9,15 +9,15 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class RestCategoryController {
     private final RestTemplate restTemplate;
-    private final String baseURI = "http://localhost:8080/category/";
+    private final String baseURI = "http://localhost:3306/category/";
 
 
     public RestCategoryController(){
         restTemplate = new RestTemplate();
     }
 
-    public ProductCategory addCategory(String categoryName, Long catid){
-        return restTemplate.postForObject(baseURI + "create?categoryName=" + categoryName + "&catid=" + catid, null, ProductCategory.class);
+    public ProductCategory addCategory(String categoryName){
+        return restTemplate.postForObject(baseURI + "create?categoryName=" + categoryName, null, ProductCategory.class);
     }
 }
 

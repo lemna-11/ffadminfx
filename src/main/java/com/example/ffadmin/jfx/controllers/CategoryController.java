@@ -13,8 +13,7 @@ import java.io.IOException;
 public class CategoryController {
     @FXML
     public TextField categoryName;
-    @FXML
-    public TextField catid;
+
 
     public RestCategoryController categoryController;
 
@@ -23,7 +22,7 @@ public class CategoryController {
     }
 
     public void addCategory(ActionEvent actionEvent) {
-        categoryController.addCategory(categoryName.getText(), Long.parseLong(catid.getText()));
+        categoryController.addCategory(categoryName.getText());
     }
 
     public void returnToMainPage(ActionEvent actionEvent) throws IOException {

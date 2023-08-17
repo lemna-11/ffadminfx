@@ -26,6 +26,14 @@ public class RestProductController {
 
     public Long addProduct(String name, String category, Long price){
         ProductCategory cat = this.productCategoryController.findByName(category);
+        if(name == null){
+            throw new RuntimeException("cant be not named");
+        }else if (category == null){
+            throw new RuntimeException("cant have no category");
+        }
+        else if(price == null){
+            throw new RuntimeException("cant have no price");
+        }
         return restTemplate.postForObject(baseURI + "create?name=" + name + "&category=" + cat + "&price=" + price, null, Long.class);
     }
 

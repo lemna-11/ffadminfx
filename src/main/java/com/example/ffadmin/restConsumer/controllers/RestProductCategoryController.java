@@ -1,5 +1,6 @@
 package com.example.ffadmin.restConsumer.controllers;
 
+import com.example.ffadmin.restConsumer.entities.Product;
 import com.example.ffadmin.restConsumer.entities.ProductCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,6 @@ public class RestProductCategoryController {
     }
 
     public ProductCategory findByName(String name){
-        return null;
+        return restTemplate.getForObject(baseURI +  "readCategoryName?name=" + name, ProductCategory.class);
     }
 }
