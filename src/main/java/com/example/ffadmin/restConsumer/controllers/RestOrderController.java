@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class RestOrderController {
     private final RestTemplate restTemplate;
-    private final String baseURI = "http://localhost:3306/order/";
+    private final String baseURI = "http://localhost:8080/order/";
 
 
     public RestOrderController(){
