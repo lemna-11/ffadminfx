@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class RestProductCategoryController {
     private final RestTemplate restTemplate;
-    private final String baseURI = "http://localhost:8080/product/";
+    private final String baseURI = "http://localhost:8080/productcategory/";
 
     public RestProductCategoryController(){
         restTemplate = new RestTemplate();

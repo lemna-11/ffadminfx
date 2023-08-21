@@ -34,7 +34,6 @@ public class RestProductController {
         else if(price == null){
             throw new RuntimeException("cant have no price");
         }
-        return restTemplate.postForObject(baseURI + "create?name=" + name + "&category=" + cat + "&price=" + price, null, Long.class);
+        return restTemplate.postForObject(baseURI + "create?name=" + name + "&category=" + cat.getId() + "&price=" + price, null, Long.class);
     }
-
 }
