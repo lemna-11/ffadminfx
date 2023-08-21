@@ -1,7 +1,7 @@
 package com.example.ffadmin.jfx.controllers;
 
 
-import com.example.ffadmin.restConsumer.controllers.RestCategoryController;
+import com.example.ffadmin.restConsumer.controllers.RestProductCategoryController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -15,10 +15,10 @@ public class CategoryController {
     public TextField categoryName;
 
 
-    public RestCategoryController categoryController;
+    public RestProductCategoryController categoryController;
 
     public CategoryController(){
-        this.categoryController = new RestCategoryController();
+        this.categoryController = new RestProductCategoryController();
     }
 
     public void addCategory(ActionEvent actionEvent) {

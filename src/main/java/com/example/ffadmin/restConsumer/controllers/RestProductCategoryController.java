@@ -19,4 +19,7 @@ public class RestProductCategoryController {
     public ProductCategory findByName(String name){
         return restTemplate.getForObject(baseURI +  "readCategoryName?name=" + name, ProductCategory.class);
     }
+    public ProductCategory addCategory(String categoryName){
+        return restTemplate.postForObject(baseURI + "create?categoryName=" + categoryName, null, ProductCategory.class);
+    }
 }
